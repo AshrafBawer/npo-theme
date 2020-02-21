@@ -1,0 +1,34 @@
+
+*,*::after,*::before {
+    padding: 0;
+}
+
+html {
+    font-size: 10px; // 1rem=10px
+}
+
+body {
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.ui.form {
+    font-size: 1.4rem !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.ui.button, .ui.buttons .button, .ui.buttons .or .ui.checkbox .box, .ui.checkbox label {
+    font-size: 1.4rem;
+}
+
+.ui.checkbox label {
+    cursor: pointer;
+}
+
+[id$='-page'] {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+}

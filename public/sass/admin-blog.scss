@@ -1,0 +1,29 @@
+
+#admin-blog {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    #posts {
+        margin: 5rem 0;
+
+        .post {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            &:not(:last-of-type){
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                padding-bottom: 5px;
+            }
+            &:hover {
+                background: rgba(0,0,0,.03);
+            }
+            a {
+                padding-left: 1rem;
+                flex-grow: 1;
+            }
+
+            .buttons form.button-form {
+                display: inline-block !important;
+            }
+        }
+    }
+}

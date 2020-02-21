@@ -1,0 +1,30 @@
+
+<!-- Register form -->
+<section id="register">
+  <% include partials/header %>
+
+  <div class="ui container" id="form">
+    <form action="/admin/register" method="POST" class="ui form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input required id="username" type="text" name="username">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input required id="password" type="password" name="password">
+        <div class="ui checkbox">
+          <input id="checkbox" type="checkbox">
+          <label id="show-pass" class="margin-top-1" for="checkbox">Show password</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input required id="email" type="email" name="email">
+      </div>
+      <button class="ui button" type="submit">Register Admin</button>
+    </form>
+  </div>
+  <% include partials/footer %>
+</section>
+
+

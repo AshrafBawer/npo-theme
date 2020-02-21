@@ -1,0 +1,26 @@
+
+<!-- Register form -->
+<section id="register">
+  <% include partials/header %>
+
+  <div class="ui container" id="form">
+    <form action="/admin" method="POST" class="ui form">
+      <div class="field">
+        <div class="two fields">
+          <div class="field">
+            <label>Username / Email</label>
+            <input required type="text" name="username" placeholder="Username">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input required type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+      </div>
+      <button class="ui button" type="submit">Login</button>
+    </form>   
+  </div>
+  <% include partials/footer %>
+</section>
+
+

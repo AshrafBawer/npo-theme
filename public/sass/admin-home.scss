@@ -1,0 +1,52 @@
+
+#admin-home-page {
+    padding-top: 7rem;
+}
+
+.form-div {
+    display:flex;
+    padding: 2rem;
+}
+
+
+.ui.form {
+    flex-grow: 1;
+}
+
+.home-form {
+    .sixteen.wide.field:not(:last-of-type) {
+        padding-right: 4rem;
+    }
+
+    .sixteen.wide.field:not(:first-of-type){
+        padding-left: 4rem;
+    }
+}
+
+.form-div .paragraph{
+    flex-direction: column;
+    width: 50%;
+    box-sizing: border-box;
+    
+    &:first-of-type {
+        padding-right: 2rem;
+    }
+
+    &:last-of-type {
+        padding-left: 2rem;
+    }
+
+    .sixteen.wide.field {
+        padding: 0;
+    }
+}
+
+#donors-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .donor {
+        text-align: center;
+        margin: 1rem 2rem;
+    }
+}

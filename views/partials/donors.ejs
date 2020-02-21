@@ -1,0 +1,24 @@
+
+<% donors.forEach((donor) => { %>
+    <div class="donor">
+        <img class="donor-logo" src="<%= donor.url %>" />
+        <div class="buttons">
+            <button data-id="<%= donor.id %>" class="ui red button button-delete">Delete</button>
+        </div>
+    </div>
+<% }) %>
+    
+
+<script>
+$('.button-delete').on('click', function () {
+    const donorId = $(this).data('id');
+    $.ajax({
+        url: `/admin/donor/${donorId}/delete`,
+        method: 'DELETE',
+    }).done(function(){
+        $.ajax('/donors').done((res) => {
+        $('.donor').parent().html(res);
+        });
+    });
+});
+</script>

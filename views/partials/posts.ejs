@@ -1,0 +1,30 @@
+<h4 class="ui dividing header h2">Posts</h4>
+<% for(let i=0, count = 1; i< posts.length; i++, count++) { %>
+    <div class="post">
+        <span><%= count %>:</span>
+       <a class="pad-left-2" href="/blog/<%= posts[i].id %>"><%= posts[i].title %></a>
+        <div class="buttons">
+        <form class="button-form" action="/admin/blog/<%= posts[i].id %>/edit">
+            <button class="ui button">Edit</button>
+        </form>
+        <button data-id="<%= posts[i].id %>" class="ui red button button-delete">Delete</button>
+        </div>
+    </div>
+<% } %>
+
+<script>
+$('.button-delete').on('click', function () {
+    const postId = $(this).data('id');
+    $.ajax({
+        url: `/admin/blog/${postId}/delete`,
+        method: 'DELETE',
+    }).done(function(){
+        $.ajax({
+        url: '/posts',
+        method: 'GET',
+        }).done((res) => {
+        $('.post').parent().html(res);
+        });
+    });
+});
+</script>

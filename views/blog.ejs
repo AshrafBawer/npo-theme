@@ -1,0 +1,55 @@
+
+
+<% include partials/header %>
+<% include partials/sidebar %>
+<div class="pusher">
+  <!-- Site content !-->
+    <section class="ui container" id="blog-page">
+      <h1 class="h1 center margin-bottom-3">Blog Posts</h1>
+      <div class="ui link cards">
+        <% posts.forEach((post) => { %>
+          <a href="/blog/<%= post.id %>" class="card">
+            <% if(post.image){ %>
+              <div class="image">
+                <img src="<%= post.image %>">
+              </div>
+            <% } else { %> 
+              <div class="ui placeholder">
+                <div class="image"></div>
+              </div>
+            <% } %>
+
+            <div class="content">
+              <div class="header"><%= post.title %></div>
+              <% if(post.author){ %>
+                <div class="meta">
+                  <span>Author: <%= post.author %></span>
+                </div>
+              <% } %>
+              <div class="description">
+                <%- post.body.substring(0,100) %>...
+                <div class="optional">click to read more</div>
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="right floated">
+                Created: <%= post.created.toDateString() %>
+              </span>
+              <!-- <span>
+                <i class="user icon"></i>
+                75 Friends
+              </span> -->
+            </div>
+          </a href="/blog/<%= post.id %>">
+          
+        <% }) %>
+      </div>
+    </section>
+</div> 
+<% include partials/footer %>
+
+
+
+
+
+

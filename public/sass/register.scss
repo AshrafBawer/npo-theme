@@ -1,0 +1,25 @@
+
+#register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    #form {
+        font-size: 1.4rem;
+        margin: 2rem 0;
+        #show-pass {
+            -webkit-user-select: none;  /* Chrome all / Safari all */
+            -moz-user-select: none;     /* Firefox all */
+            -ms-user-select: none;      /* IE 10+ */
+            user-select: none;          /* Likely future */ 
+        }
+    }
+    #navbar {
+        position: relative;
+    }
+
+    .column {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,120 @@
+
+
+<% include ../partials/header %>
+<% include ../partials/sidebar %>
+<div class="pusher">
+  <!-- Site content !-->
+    <div id="admin-home-page" class="ui container">
+      <div id="home-message" class="ui piled text segment">
+        <h4 class="ui header h4">A header</h4>
+        <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+        <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
+        <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
+      </div>
+      <div class="ui segment">
+        <h3 class="h2">Hero Area</h3>
+        <div class="form-div">
+          <form class="ui form home-form">
+            <div class="sixteen wide field">
+                <label>Company Name</label>
+                <input type="text" id="data" data-name="company-name" name="data" value="<%= content['company-name'] %>">
+            </div>
+            <div>
+              <button class="ui button">Submit</button>
+            </div>
+        </form>
+        <form class="ui form home-form">
+            <div class="sixteen wide field">
+                <label>Hero Heading</label>
+                <input type="text" id="data" data-name="hero-heading" name="data" value="<%= content['hero-heading'] %>">
+            </div>
+            <button class="ui button">Submit</button>
+        </form>
+        </div>
+      </div>
+      <div class="ui segment">
+        <h3 class="h2">Introduction</h3>
+        <div class="form-div">
+          <div class="paragraph">
+            <form class="ui form home-form">
+              <div class="sixteen wide field">
+                  <label>Intro one Heading</label>
+                  <input type="text" id="data" data-name="intro-1-heading" name="data" value="<%= content['intro-1-heading'] %>">
+              </div>
+              <div>
+                <button class="ui button">Submit</button>
+              </div>
+            </form>
+            <form class="ui form home-form margin-top-2">
+              <div class="sixteen wide field">
+                  <label>Intro One Image</label>
+                  <input type="text" id="data" data-name="intro-1-image" name="data" value="<%= content['intro-1-image'] %>">
+              </div>
+              <div>
+                <button class="ui button">Submit</button>
+              </div>
+            </form>
+            <form class="ui form home-form margin-top-2">
+              <div class="sixteen wide field">
+                  <label>Intro one Paragraph</label>
+                  <textarea type="text" id="data" data-name="intro-1-data" name="data"><%= content['intro-1-data'] %></textarea>
+              </div>
+              <button class="ui button">Submit</button>
+            </form>
+          </div>
+          <div class="paragraph">
+            <form class="ui form home-form">
+              <div class="sixteen wide field">
+                  <label>Intro Two Heading</label>
+                  <input type="text" id="data" data-name="intro-2-heading" name="data" value="<%= content['intro-2-heading'] %>">
+              </div>
+              <div>
+                <button class="ui button">Submit</button>
+              </div>
+            </form>
+            <form class="ui form home-form margin-top-2">
+              <div class="sixteen wide field">
+                  <label>Intro Two Image</label>
+                  <input type="text" id="data" data-name="intro-2-image" name="data" value="<%= content['intro-2-image'] %>">
+              </div>
+              <div>
+                <button class="ui button">Submit</button>
+              </div>
+            </form>
+            <form class="ui form home-form margin-top-2">
+              <div class="sixteen wide field">
+                  <label>Intro Two Paragraph:</label>
+                  <textarea type="text" id="data" data-name="intro-2-data" name="data"><%= content['intro-2-data'] %></textarea>
+              </div>
+              <button class="ui button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="ui segment">
+        <h3 class="h2">Add Donors Logos</h3>
+        <div class="form-div">
+          <form id="donor-form" class="ui form">
+            <div class="sixteen wide field">
+                <label>Donor's Logo Image</label>
+                <input type="text" id="logo-url" name="image" placeholder="Paste logo's url here">
+            </div>
+            <div>
+              <button class="ui button">Add</button>
+            </div>
+        </form>
+        </div>
+        <h4 class="ui dividing header h2">Donors List</h4>
+        <div id="donors-list">
+
+        </div>
+      </div>
+    </div>
+</div> 
+<% include ../partials/footer %>
+
+
+
+
+
+

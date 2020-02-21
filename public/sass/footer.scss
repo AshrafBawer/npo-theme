@@ -1,0 +1,35 @@
+@import './responsive.scss';
+
+#footer {
+    background-color: #34495e;
+    height: 20rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .footer__link {
+        color: #bdc3c7;
+        font-size: 1.4rem;
+        margin-right: 2rem;
+
+        &:hover {
+            color: #ecf0f1;
+        }
+    }
+
+    .copyright {
+        font-size: 1rem;
+        color: #95a5a6;
+        align-self: flex-end;
+    }
+
+    &.ui {
+        @include res(mobile){
+            margin: 0 !important;
+        }
+    }
+
+    .ui.grid {
+        margin: 0 ;
+    }
+}

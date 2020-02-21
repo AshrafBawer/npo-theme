@@ -1,0 +1,18 @@
+<% include partials/header %>
+<% include partials/sidebar %>
+<div class="pusher">
+  <!-- Site content !-->
+    <section class="ui container" id="post-page">
+        <h1 class="h1"><%= post.title %></h1>
+        <% if(post.author){ %> 
+            <h2 class="text date">Author: <%= post.author %></h2>
+        <% } %>
+        <h2 class="text date">Created: <%= post.created.toDateString() %></h2>
+
+        <div class="content">
+            <img class="image" src="<%= post.image %>" />
+            <%- post.body %>
+        </div>
+    </section>
+</div> 
+<% include partials/footer %>

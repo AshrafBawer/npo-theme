@@ -1,0 +1,133 @@
+
+// navbar scroll animation
+@import './responsive.scss';
+
+
+
+#hero {
+    height:100vh;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, rgba(52, 73, 94,.4), rgba(44, 62, 80,.6)), url('../mini_images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.ui {
+        @include res(mobile){
+            margin: 0 !important;
+        }
+
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+
+        @include res(mobile){
+            font-size: 2rem;
+        }
+    }
+}
+
+
+#about {
+
+    .ui.grid {
+        margin-bottom: 0;
+        margin-top: 0;
+
+        .background-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .column {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include res (mobile){
+            padding-left: 6rem !important;
+            padding-right: 6rem !important;
+        }
+        @media only screen and (max-width:600px){
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+    }
+
+    .text {
+        padding: 3rem;
+    }
+}
+
+#works {
+    .column {
+        position: relative;
+        min-height: 200px;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        @include res(mobile){
+            margin-bottom: 2rem !important;
+        }
+    }
+
+    .column:not(:last-of-type){
+        margin-right: auto;
+    }
+
+    .work__image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        @include res(tab-land){
+            height:250px;
+        }
+    }
+}
+
+#address {
+    background-color: #f7f7f7;
+}
+
+#donors {
+    .logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .image-div {
+            margin: 0 2rem 2rem 2rem;  
+        }
+    }
+
+    .donor__logo {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .ui.grid {
+        margin-top: 2rem;
+    }
+
+    .ui.container {
+        margin-top: 2rem;
+    }
+}
+
+
+

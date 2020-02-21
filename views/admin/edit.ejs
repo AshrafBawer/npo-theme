@@ -1,0 +1,41 @@
+
+
+<% include ../partials/header %>
+<% include ../partials/sidebar %>
+<div class="pusher">
+  <!-- Site content !-->
+   <div id="admin-blog" class="ui container">
+    <h1 class="h1 center">Edit Post</h1> 
+    <form class="ui form" action="/admin/blog/<%= post.id %>?_method=PUT" method="POST" id="post-edit-form">
+     <h4 class="ui dividing header h2">edit <%= post.title %></h4>
+     <div class="field">
+       <div class="two fields">
+         <div class="field">
+            <label>Post Title</label>
+           <input type="text" id="post-title" name="title" value="<%= post.title %>" required placeholder="Title of the post">
+         </div>
+         <div class="field">
+            <label>Post's Author <span class="optional">optional</span></label>
+           <input id="post-author" value="<%= post.author %>" type="text" name="author" placeholder="Author">
+         </div>
+       </div>
+     </div>
+     <div class="field">
+        <label>Image Link</label>
+        <input id="post-image" value="<%= post.image %>" type="text" name="image" placeholder="Paste image link here">
+     </div>
+     <div class="field">
+         <label>Post Body</label>
+         <textarea required name="body" id="post-body" cols="30" rows="10"><%= post.body %></textarea>
+     </div>
+     <button class="ui button" >Create</button>
+     </form>
+   </div>
+</div> 
+<% include ../partials/footer %>
+
+
+
+
+
+

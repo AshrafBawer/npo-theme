@@ -1,0 +1,25 @@
+@mixin res($breakpoint){
+    @if $breakpoint == mobile {
+        @media (max-width: 767px){ 
+            @content
+        }
+    };
+
+    @if $breakpoint == tablet {
+        @media (min-width: 768px) {
+            @content
+        }
+    };
+
+    @if $breakpoint == small-m {
+        @media (min-width: 992px){ 
+            @content;
+        }
+    };
+
+    @if $breakpoint == large-m {
+        @media (min-width: 75em) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+<% include partials/header %>
+<% include partials/sidebar %>
+<div class="pusher">
+  <!-- Site content !-->
+  <!-- Hero section -->
+  <section class="ui center aligned container fluid margin-bottom-3" id="hero">
+    <h1><%= content['company-name'] %></h1>
+    <h2><%- content['hero-heading'] %></h2>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="ui center aligned container margin-bottom-3" id="about">
+    <div class="ui stackable grid margin-top-3">
+      <% if(content['intro-1-image']){ %>
+        <div class="eight wide tablet computer only column background-image"
+        style="background-image: url(<%= content['intro-1-image'] %>);"></div>
+      <% } %>
+      <div class=" eight wide tablet eight wide computer column text">
+        <h3 class="h2"><%= content['intro-1-heading'] %></h3>
+        <%= content['intro-1-data'] %>
+      </div>
+    </div>
+    <div class="stackable ui grid">
+      <div class="ten wide mobile eight wide tablet eight wide computer column text">
+        <h3 class="h2"><%= content['intro-2-heading'] %></h3>
+        <%= content['intro-2-data'] %>
+      </div>
+      <% if(content['intro-2-image']){ %>
+        <div class="eight wide tablet computer only column background-image"
+        style="background-image: url(<%= content['intro-2-image'] %>);"></div>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Latest Works/Projects Section -->
+  <section class="ui center aligned container margin-bottom-5" id="works">
+    <div class="ui divider"></div>
+    <h3 class="h2">Our latest works</h3>
+    <div class="ui stackable grid margin-top-3">
+      <% posts.forEach((post) => { %>
+        <div class="five wide column">
+          <div class="work__image" 
+          style="background-image: linear-gradient(to right bottom, rgba(236, 240, 241,.5), rgba(189, 195, 199,.5)), url(<%= post.image %>);"></div>
+          <h4 class="h3"><%= post.title %></h4>
+          <p><%- post.body.substring(0,50); %>...</p>
+          <a href="/blog/<%= post.id %>" class="ui button">
+            Read
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Location & Subscribe section -->
+  <section class="ui container fluid margin-bottom-3" id="address">
+    <div class="ui container pad-top-3 pad-bot-3">
+      <div class="ui stackable grid">
+        <div class="eight wide column">
+          <h3 class="h2">Our Office Location</h3>
+          <!-- Google Map -->
+          <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.99741530418397%2C40.278314274604575%2C-73.98919701576234%2C40.282840521729895&amp;layer=mapnik&amp;marker=40.28057743604576%2C-73.99330615997314" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=40.28058&amp;mlon=-73.99331#map=17/40.28058/-73.99331&amp;layers=N">View Larger Map</a></small>
+        </div>
+        <div class="eight wide column">
+          <h3 class="h2 ui center aligned">Subscribe To Our Newsletter</h3>
+          <form id="subscribe_form" class="ui form">
+            <div class="field">
+              <label>First Name</label>
+              <input required type="text" name="first_name" placeholder="Your First Name">
+            </div>
+            <div class="field">
+              <label>E-mail</label>
+              <input required type="email" name="email" placeholder="joe@schmoe.com">
+            </div>
+            <button class="ui submit button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donors Sections -->
+  <section class="ui container margin-bottom-3" id="donors">
+    <% if(donors.length !== 0){ %>
+      <h3 class="h2 center">Our Donors</h3>
+      <div class="ui container logos">
+        <% donors.forEach((donor) => { %>
+          <div class="image-div ui image">
+            <img src="<%= donor.url %>" class="donor__logo" alt="Donor Logo">
+          </div>
+        <% }) %>
+      </div>
+    <% } %> 
+    <div class="ui container center aligned">
+      <h4 class="h3">Help Perserve Forests</h4>
+      <p class="text__help">Support for the continued work of Company Name directly from the site.</p>
+      <button class="ui teal button">Donate Today</button>
+    </div>
+  </section>
+</div> 
+<% include partials/footer %>

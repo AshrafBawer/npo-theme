@@ -1,0 +1,50 @@
+
+// .title {
+//     color: #222;
+//     text-align: center;
+    
+//     &__big {
+//         font-size: 2.7rem;
+//     }
+
+//     &__section {
+//         font-size: 2.5rem;
+//     }
+
+//     &__work {
+//         font-size: 2rem;
+//     }
+
+//     &__support {
+//         font-size: 1.8rem;
+//     }
+// }
+
+.h1 {
+    font-size: 3rem !important;
+}
+
+.h2 {
+    font-size: 2.5rem !important;
+}
+
+.h3 {
+    font-size: 2rem !important;
+}
+
+.h4 {
+    font-size: 1.8rem !important;
+}
+
+.text {
+    font-size: 1.4rem !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.optional {
+    font-size: 1rem;
+    color: rgba(0,0,0,0.5);
+}
